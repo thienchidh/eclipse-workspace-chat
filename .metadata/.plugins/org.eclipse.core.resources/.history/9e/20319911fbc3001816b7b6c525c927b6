@@ -1,0 +1,14 @@
+
+package controls.icontrols;
+
+import java.io.*;
+
+import model.*;
+
+public interface IHandle extends Runnable {
+
+	boolean sendMessageToClient(Message s) throws IOException;
+
+	Message receiveMessage() throws IOException, ClassNotFoundException;
+
+}

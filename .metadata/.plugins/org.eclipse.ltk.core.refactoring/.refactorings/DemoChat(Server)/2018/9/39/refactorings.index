@@ -1,0 +1,11 @@
+1538231460409	Convert local variable 'btnStart' to field
+1538231464514	Convert local variable 'btnStop' to field
+1538233647100	Delete elements
+1538233651234	Delete elements
+1538234356127	Rename method 'sendMessage'
+1538235099766	Rename method 'sendMessageToClient'
+1538236240828	Convert local variable 'osw' to field
+1538236269013	Convert local variable 'oos' to field
+1538236326671	Convert local variable 'is' to field
+1538236584925	Rename field 'osw'
+1538238722685	Extract local variable 'target'

@@ -1,0 +1,13 @@
+
+package controls.factory;
+
+import controls.icontrols.*;
+
+public class FactoryInstanceControls {
+
+	IConnect	connect;
+	IHandle		handle;
+
+	
+
+}

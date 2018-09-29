@@ -1,0 +1,54 @@
+
+package controls.controls;
+
+import java.io.*;
+import java.net.*;
+
+import controls.icontrols.*;
+import model.*;
+
+public class Handle implements IHandle {
+
+	Socket		socket;
+	IReceive	iReceive;
+	private OutputStream osw;
+
+	public Handle(Socket socket) {
+
+		super();
+		this.socket = socket;
+		
+		try {
+			osw = socket.getOutputStream();
+			
+			
+			
+		} catch(IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void run() {
+
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean sendMessage(Message s) throws IOException {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Message receiveMessage() throws IOException {
+
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

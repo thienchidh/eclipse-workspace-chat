@@ -1,0 +1,28 @@
+package ui;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class ServerUI extends JFrame{
+
+	public ServerUI(String title) throws HeadlessException {
+
+		super(title);
+		addControls();
+		addEvents();
+	}
+
+	private void addEvents() {
+
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void addControls() {
+
+		// TODO Auto-generated method stub
+		
+	}
+	
+}	

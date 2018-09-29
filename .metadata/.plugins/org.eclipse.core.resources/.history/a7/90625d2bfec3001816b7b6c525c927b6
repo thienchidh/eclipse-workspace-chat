@@ -1,0 +1,9 @@
+
+package controls.icontrols;
+
+import java.io.*;
+
+public interface IReceive {
+
+	boolean sendMessageToClient() throws IOException;
+}

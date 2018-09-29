@@ -1,0 +1,56 @@
+
+package ui;
+
+import static controls.factory.IText.*;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class ServerUI extends JFrame {
+
+	public ServerUI(String title) throws HeadlessException {
+
+		super(title);
+		addControls();
+		addEvents();
+	}
+
+	public void showWindow() {
+
+		pack();
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+
+	private void addEvents() {
+
+		addWindowListener(new WindowAdapter() {
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+
+				xyLyThoat();
+			}
+		});
+	}
+
+	protected void xyLyThoat() {
+
+		int ret = showConFirm("Xác Nhận Thoát?", JOptionPane.YES_NO_OPTION);
+		if(ret == JOptionPane.YES_OPTION) {
+			// add close connect here
+			closeConnect();
+			System.exit(0);
+		}
+	}
+
+	private void addControls() {
+
+		// TODO Auto-generated method stub
+
+	}
+
+}

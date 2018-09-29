@@ -1,0 +1,92 @@
+
+package controls.controls;
+
+import java.io.*;
+import java.net.*;
+
+import controls.icontrols.*;
+import model.*;
+
+public class Handle implements IHandle {
+
+	Socket						socket;
+	IReceive					iReceive;
+	private OutputStream		os;
+	private ObjectOutputStream	oos;
+	private InputStream			is;
+	private ObjectInputStream	ois;
+
+	public Handle(Socket socket) {
+
+		super();
+		this.socket = socket;
+
+		try {
+			os = socket.getOutputStream();
+			oos = new ObjectOutputStream(os);
+
+			is = socket.getInputStream();
+			ois = new ObjectInputStream(is);
+
+		} catch(IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void run() {
+
+		try {
+			while(true) {
+				Message message = receiveMessage();
+				iReceive.sendMessageToClient(message);
+			}
+		} catch(ClassNotFoundException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				oos.close();
+			} catch(IOException e3) {
+				// TODO Auto-generated catch block
+				e3.printStackTrace();
+			}
+			try {
+				ois.close();
+			} catch(IOException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
+			try {
+				is.close();
+			} catch(IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				os.close();
+			} catch(IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	@Override
+	public boolean sendMessage(Message s) throws IOException {
+
+		oos.writeObject(s);
+		return false;
+	}
+
+	@Override
+	public Message receiveMessage() throws IOException, ClassNotFoundException {
+
+		return (Message)ois.readObject();
+
+	}
+
+}

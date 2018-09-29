@@ -1,0 +1,60 @@
+
+package controls.controls;
+
+import java.io.*;
+import java.net.*;
+
+import controls.factory.*;
+import controls.icontrols.*;
+import model.*;
+
+public class Handle implements IHandle {
+
+	Socket				socket;
+
+	InputStream			is;
+	OutputStream		os;
+
+	ObjectInputStream	ois;
+	ObjectOutputStream	oos;
+	// hiện tại chưa biết cách đóng mấy cái này lại, thiết kế lởm rồi
+
+	public Handle() {
+
+		super();
+		socket = FactoryInstanceControls.getSocket();
+
+		try {
+			inititalize();
+		} catch(IOException e) {
+			e.printStackTrace(System.out);
+		}
+
+	}
+
+	private void inititalize() throws IOException {
+
+		is = socket.getInputStream();
+		os = socket.getOutputStream();
+
+		ois = new ObjectInputStream(is);
+		oos = new ObjectOutputStream(oos);
+	}
+
+	@Override
+	public boolean sendMessage(Message s) throws IOException {
+
+		// TODO Auto-generated method stub
+		oos.writeObject(s);
+
+		return false;
+	}
+
+	@Override
+	public Message receiveMessage() throws IOException, ClassNotFoundException {
+
+		// TODO Auto-generated method stub
+		return (Message)ois.readObject();
+	}
+
+}

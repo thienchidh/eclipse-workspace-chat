@@ -1,0 +1,14 @@
+
+package controls.icontrols;
+
+import java.io.*;
+
+import model.*;
+
+public interface IHandle {
+
+	boolean sendMessage(Message s) throws IOException;
+
+	boolean receiveMessage(String s) throws IOException;
+
+}

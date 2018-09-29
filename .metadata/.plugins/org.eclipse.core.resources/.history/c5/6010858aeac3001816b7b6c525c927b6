@@ -1,0 +1,9 @@
+
+package controls.icontrols;
+
+public interface IControls
+{
+
+	boolean openConnect();
+
+}

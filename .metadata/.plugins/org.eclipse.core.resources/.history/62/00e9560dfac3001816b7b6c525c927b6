@@ -1,0 +1,31 @@
+
+package controls.controls;
+
+import java.io.*;
+
+import controls.icontrols.*;
+
+public class Controls implements IControls {
+
+	@Override
+	public boolean startServer(int port) throws IOException {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean stopServer() throws IOException {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void processing() {
+
+		// TODO Auto-generated method stub
+
+	}
+
+}

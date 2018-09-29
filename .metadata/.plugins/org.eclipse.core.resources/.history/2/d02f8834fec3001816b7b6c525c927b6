@@ -1,0 +1,68 @@
+
+package controls.controls;
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+import controls.icontrols.*;
+import model.*;
+
+public class Controls implements IControls, IReceive {
+
+	ServerSocket	serverSocket;
+	Set<IHandle>	handles;
+
+	@Override
+	public boolean startServer(int port) throws IOException {
+
+		serverSocket = new ServerSocket(port);
+		handles = new HashSet<>();
+		return true;
+	}
+
+	@Override
+	public boolean stopServer() throws IOException {
+
+		serverSocket.close();
+		return false;
+	}
+
+	@Override
+	public void processing() {
+
+		try {
+			while(true) {
+				new Thread(new Handle(serverSocket.accept())).start();
+			}
+
+		} catch(IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				stopServer();
+			} catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	@Override
+	public Message receiveMessage() throws IOException, ClassNotFoundException {
+
+		return null;
+
+	}
+
+	@Override
+	public boolean sendMessageToClient(Message s) throws IOException {
+
+		for(IHandle handle: handles) {
+			handle.sendMessage(s);
+		}
+		
+		return true;
+	}
+
+}

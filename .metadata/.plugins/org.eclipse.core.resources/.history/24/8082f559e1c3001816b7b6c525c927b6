@@ -1,0 +1,6 @@
+package controls.factory;
+
+
+public interface IText {
+
+}

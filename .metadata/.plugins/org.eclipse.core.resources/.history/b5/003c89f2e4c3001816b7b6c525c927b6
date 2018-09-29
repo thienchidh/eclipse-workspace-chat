@@ -1,0 +1,12 @@
+
+package model;
+
+import java.util.*;
+
+public class User {
+
+	String	name;
+	String	msg;
+	Date	dateSend;
+
+}

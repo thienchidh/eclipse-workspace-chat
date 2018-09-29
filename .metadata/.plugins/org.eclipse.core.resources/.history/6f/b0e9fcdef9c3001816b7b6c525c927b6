@@ -1,0 +1,10 @@
+
+package controls.icontrols;
+
+public interface IControls {
+
+	boolean startServer(int port);
+
+	boolean stopServer();
+
+}

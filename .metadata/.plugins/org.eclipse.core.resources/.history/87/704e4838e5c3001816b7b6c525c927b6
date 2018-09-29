@@ -1,0 +1,11 @@
+
+package controls.icontrols;
+
+import java.io.*;
+
+public interface IHandle {
+
+	boolean sendMessage(String s) throws IOException;
+	boolean receiveMessage(String s) throws IOException;
+	
+}

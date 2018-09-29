@@ -1,0 +1,26 @@
+
+package controls.factory;
+
+import javax.swing.JOptionPane;
+
+public interface IText {
+
+	static void showText(Object str, int msgType) {
+
+		System.out.println(str);
+		JOptionPane.showMessageDialog(null, str, "Thông Báo!.", msgType);
+	}
+	
+	static int showConFirm(Object msg, int optionType) {
+		return JOptionPane.showConfirmDialog(null, msg, "Xác Nhận", optionType);
+	}
+	
+	static String showInput(Object mgs, Object initString ) {
+
+		return JOptionPane.showInputDialog(mgs, initString);
+	}
+	
+	
+	
+
+}

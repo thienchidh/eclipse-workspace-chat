@@ -1,0 +1,11 @@
+
+package controls.factory;
+
+import controls.icontrols.*;
+
+public class FactoryInstancesControls {
+
+	static IControls	controls;
+	static IHandle		handle;
+
+}

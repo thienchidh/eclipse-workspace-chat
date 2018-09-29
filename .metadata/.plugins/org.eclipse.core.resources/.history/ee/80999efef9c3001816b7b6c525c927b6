@@ -1,0 +1,7 @@
+package controls.controls;
+
+import controls.icontrols.*;
+
+public class Controls implements IControls{
+	
+}

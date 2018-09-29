@@ -1,0 +1,15 @@
+
+package controls.icontrols;
+
+public interface IControls
+{
+
+	boolean moKetNoi();
+
+	boolean receiveMessage(String s);
+
+	boolean sendMessage(String s);
+
+	boolean closeConnect();
+
+}

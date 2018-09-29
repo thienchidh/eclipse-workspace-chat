@@ -1,0 +1,64 @@
+
+package controls.controls;
+
+import java.io.*;
+
+import controls.icontrols.*;
+
+public class Controls {
+
+	IConnect	connect;
+	IHandle		handle;
+
+	public Controls() {
+
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Controls(IConnect connect, IHandle handle) {
+
+		super();
+		this.connect = connect;
+		this.handle = handle;
+	}
+
+	public boolean closeConnect() {
+
+		try {
+			connect.closeConnect();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public boolean openConnect() {
+
+		try {
+			connect.openConnect();
+		} catch(Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public boolean receiveMessage(String s) {
+
+		try {
+			handle.receiveMessage(s);
+		} catch(IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public boolean sendMessage(String s) {
+
+		handle.sendMessage(s);
+		return false;
+	}
+
+}

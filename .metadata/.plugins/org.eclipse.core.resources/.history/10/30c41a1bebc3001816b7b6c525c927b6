@@ -1,0 +1,56 @@
+
+package controls.factory;
+
+import controls.controls.*;
+import controls.icontrols.*;
+
+/**
+ * Not user Reflection
+ * 
+ * @author chi
+ *
+ */
+public class FactoryInstanceControls {
+
+	static IControls	controls;
+	static IConnect		connect;
+	static IHandle		handle;
+
+	/**
+	 * @return the connect
+	 */
+	public static synchronized IConnect getConnect() {
+
+		if(connect == null) {
+			connect = new Connect();
+
+		}
+
+		return connect;
+	}
+
+	/**
+	 * @return the handle
+	 */
+	public static synchronized IHandle getHandle() {
+
+		if(handle == null) {
+			handle = new Handle();
+		}
+
+		return handle;
+	}
+
+	/**
+	 * @return the controls
+	 */
+	public static synchronized IControls getControls() {
+
+		if(controls == null) {
+			controls = new Controls(getConnect(), getHandle());
+		}
+
+		return controls;
+	}
+
+}

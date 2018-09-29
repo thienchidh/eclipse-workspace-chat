@@ -1,0 +1,53 @@
+
+package controls.controls;
+
+import java.io.*;
+import java.net.*;
+
+import controls.factory.*;
+import controls.icontrols.*;
+
+public class Handle implements IHandle {
+
+	Socket				socket;
+
+	InputStream			is;
+	OutputStream		os;
+
+	ObjectInputStream	ois;
+	ObjectOutputStream	oos;
+
+	public Handle() {
+
+		super();
+		socket = FactoryInstanceControls.getSocket();
+
+		extracted();
+
+	}
+
+	private void extracted() throws IOException {
+
+		is = socket.getInputStream();
+		os = socket.getOutputStream();
+
+		ois = new ObjectInputStream(is);
+		oos = new ObjectOutputStream(oos);
+	}
+
+	@Override
+	public boolean sendMessage(String s) throws IOException {
+
+		// TODO Auto-generated method stub
+
+		return false;
+	}
+
+	@Override
+	public boolean receiveMessage(String s) throws IOException {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,44 @@
+
+package ui;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ChatClientUI extends JFrame {
+
+	public ChatClientUI(String arg0) throws HeadlessException {
+
+		super(arg0);
+		addControls();
+		addEvents();
+	}
+
+	private void addControls() {
+
+		Container con = getContentPane();
+		con.setLayout(new BorderLayout());
+
+		JPanel pnMain = new JPanel();
+		con.add(pnMain, BorderLayout.CENTER);
+
+	}
+
+	private void addEvents() {
+
+		// TODO Auto-generated method stub
+
+	}
+
+	public void showWindow() {
+
+		setSize(600, 450);
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+
+}

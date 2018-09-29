@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+E:\eclipse-workspace-chat\.metadata\.plugins\org.eclipse.jdt.core
+222620063.index
+1107702300.index

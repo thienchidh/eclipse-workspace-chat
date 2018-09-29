@@ -1,0 +1,16 @@
+
+package controls.icontrols;
+
+import model.*;
+
+public interface IControls {
+
+	boolean dongKetNoi();
+
+	boolean guiTinNhan(Message s);
+
+	Message hienThiTinNhan();
+
+	boolean moKetNoi();
+
+}

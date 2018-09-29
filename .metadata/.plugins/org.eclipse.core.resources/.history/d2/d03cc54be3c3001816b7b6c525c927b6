@@ -1,0 +1,13 @@
+
+package test;
+
+import ui.ChatClientUI;
+
+public class TestChatClientUI {
+
+	public static void main(String[] args) {
+
+		ChatClientUI ui = new ChatClientUI("Nhìn cái gì?");
+		ui.showWindow();
+	}
+}

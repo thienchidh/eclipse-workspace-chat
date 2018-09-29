@@ -1,0 +1,16 @@
+
+package controls.factory;
+
+import controls.icontrols.*;
+
+public class FactoryInstanceControls {
+
+	private FactoryInstanceControls() {
+
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	IConnect connect;
+
+}

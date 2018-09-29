@@ -1,0 +1,50 @@
+
+package controls.controls;
+
+import java.io.*;
+
+import controls.icontrols.*;
+
+public class Controls {
+
+	IConnect	connect;
+	IHandle		handle;
+
+	public Controls() {
+
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Controls(IConnect connect, IHandle handle) {
+
+		super();
+		this.connect = connect;
+		this.handle = handle;
+	}
+
+	public boolean closeConnect() {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean openConnect() {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean receiveMessage(String s) {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean sendMessage(String s) {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

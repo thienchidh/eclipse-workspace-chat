@@ -1,0 +1,36 @@
+
+package controls.controls;
+
+import java.io.*;
+import java.net.*;
+
+import controls.icontrols.*;
+
+public class Controls implements IControls {
+
+	ServerSocket serverSocket;
+
+	@Override
+	public boolean startServer(int port) throws IOException {
+
+		serverSocket = new ServerSocket(port);
+		return false;
+	}
+
+	@Override
+	public boolean stopServer() throws IOException {
+
+		serverSocket.close();
+		return false;
+	}
+
+	@Override
+	public void processing() {
+
+		while(true) {
+			Socket socket = serverSocket.accept();
+		}
+
+	}
+
+}

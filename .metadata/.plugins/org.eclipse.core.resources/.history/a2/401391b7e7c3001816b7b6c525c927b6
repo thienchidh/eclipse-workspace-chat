@@ -1,0 +1,24 @@
+
+package controls.controls;
+
+import controls.icontrols.*;
+
+public class Controls {
+
+	IConnect	connect;
+	IHandle		handle;
+
+	public Controls() {
+
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Controls(IConnect connect, IHandle handle) {
+
+		super();
+		this.connect = connect;
+		this.handle = handle;
+	}
+
+}

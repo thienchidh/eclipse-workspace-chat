@@ -1,0 +1,44 @@
+
+package controls.factory;
+
+import controls.controls.*;
+import controls.icontrols.*;
+
+/**
+ * NO Reflection
+ * 
+ * @author chi
+ *
+ */
+public class FactoryInstanceControls {
+
+	static IConnect	connect;
+	static IHandle	handle;
+
+	/**
+	 * @return the connect
+	 */
+	public static synchronized IConnect getConnect() {
+
+		if(connect == null) {
+			connect = new Connect();
+
+		}
+
+		return connect;
+	}
+
+	/**
+	 * @return the handle
+	 */
+	public static synchronized IHandle getHandle() {
+
+		if(handle == null) {
+			handle = new Handle();
+
+		}
+
+		return handle;
+	}
+
+}

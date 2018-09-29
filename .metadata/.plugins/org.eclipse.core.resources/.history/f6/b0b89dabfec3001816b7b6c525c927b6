@@ -1,0 +1,16 @@
+
+package controls.icontrols;
+
+import java.io.*;
+
+import model.*;
+
+public interface IControls {
+
+	boolean startServer(int port) throws IOException;
+
+	boolean stopServer() throws IOException;
+
+	void processing();
+
+}

@@ -1,0 +1,19 @@
+1538223223699	Move compilation unit
+1538223319655	Rename local variable 'option'
+1538223417937	Rename local variable 'i'
+1538224471032	Rename method 'check'
+1538225974517	Move compilation unit
+1538227168579	Convert local variable 'socket' to field
+1538227307947	Rename method 'openConnect'
+1538227319597	Rename method 'receiveMessage'
+1538227327763	Rename method 'sendMessage'
+1538227334406	Rename method 'closeConnect'
+1538227809452	Extract method 'extracted'
+1538227899119	Rename type 'User'
+1538228754589	Convert local variable 'sb' to field
+1538231144814	Copy compilation unit
+1538231171305	Copy compilation unit
+1538231191850	Copy compilation units
+1538231206772	Copy compilation units
+1538234214627	Copy compilation unit
+1538238215783	Rename method 'hienThiTinNhan'

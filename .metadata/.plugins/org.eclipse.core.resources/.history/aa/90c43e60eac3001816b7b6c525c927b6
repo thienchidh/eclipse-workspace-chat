@@ -1,0 +1,9 @@
+
+package controls.icontrols;
+
+public interface IConnect {
+
+	boolean openConnect() throws Exception;
+
+	boolean closeConnect() throws Exception;
+}

@@ -1,0 +1,17 @@
+
+package test;
+
+import javax.swing.*;
+
+import controls.factory.*;
+import ui.*;
+
+public class TestChatClientUI {
+
+	public static void main(String[] args) {
+
+		String username = showInput()
+		ChatClientUI ui = new ChatClientUI("Nhìn cái gì?");
+		ui.showWindow();
+	}
+}

@@ -1,0 +1,37 @@
+
+package controls.factory;
+
+import controls.icontrols.*;
+
+public class FactoryInstanceControls {
+
+	private FactoryInstanceControls() {
+
+		super();
+		// TODO Auto-generated constructor stub
+		connect = Instances.getConnect();
+		handle = Instances.getHandle();
+	}
+	
+	private static class Instances{
+
+		public static IHandle getHandle() {
+
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		public static IConnect getConnect() {
+
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+
+	IConnect	connect;
+	IHandle		handle;
+	
+	
+
+}

@@ -1,0 +1,30 @@
+
+package controls.factory;
+
+import controls.controls.*;
+import controls.icontrols.*;
+
+/**
+ * Not user Reflection
+ * 
+ * @author chi
+ *
+ */
+public class FactoryInstanceControls {
+
+	static IControls controls;
+
+	
+	/**
+	 * @return the controls
+	 */
+	public static synchronized IControls getControls() {
+	
+		if(controls == null) {
+			controls = new Controls());			
+		}
+
+		return controls;
+	}
+
+}

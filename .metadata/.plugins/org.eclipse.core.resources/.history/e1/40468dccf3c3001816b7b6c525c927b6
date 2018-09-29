@@ -1,0 +1,39 @@
+
+package ui;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class ServerUI extends JFrame {
+
+	public ServerUI(String title) throws HeadlessException {
+
+		super(title);
+		addControls();
+		addEvents();
+	}
+
+	public void showWindow() {
+
+		pack();
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+
+	private void addEvents() {
+		addWindowListener(new WindowAdapter() {@Override
+		public void windowClosing(WindowEvent e) {
+			
+		}});
+	}
+
+	private void addControls() {
+
+		// TODO Auto-generated method stub
+
+	}
+
+}
